@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./CSS/styleRecados.css" />
+
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div
+      class="container-fluid background d-flex flex-collum justify-content-center align-items-center"
+    >
+      <div class="row">
+        <div class="col">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="col-12 mb-3 text-light">
+                  <h1>Bem Vindo a pagina de Recados</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <form id="formRecados-1">
+                  <div class="col-4 mb-3">
+                    <input
+                      class="form-control form-control-lg"
+                      type="text"
+                      name="Desc"
+                      id="Desc"
+                      placeholder="Descrição"
+                      aria-label=".form-control example"
+                    />
+                  </div>
+
+                  <div class="col">
+                    <input
+                      class="form-control form-control-lg"
+                      type="text"
+                      name="Det"
+                      id="Det"
+                      placeholder="Detalhamento"
+                      aria-label=".form-control-lg example"
+                    />
+                  </div>
+                  <div id="msg-erro"></div>
+                  <div class="col mt-3 mb-3 text-center">
+                    <button class="my-botton" type="submit">Salvar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="col div-table text-center">
+                  <table class="table table-sm table-striped">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col" id="num">#</th>
+                        <th scope="col" id="desc">Descrição</th>
+                        <th scope="col" id="det">Detalhamento</th>
+                        <th scope="col" id="acao">Ação</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-info" id="tableBody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="col mt-3 mb-3">
+                  <button class="my-botton" type="submit" onclick="voltar()">
+                    Voltar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./javascript/listadeRecados.js"></script>
+  </body>
+</html>

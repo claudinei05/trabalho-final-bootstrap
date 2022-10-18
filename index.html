@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <div
+      class="container-fluid container-layout d-flex flex-collum justify-content-center align-items-center p-3 box_container"
+    >
+      <div class="row">
+        <div
+          class="col-12 col-sm-6 col-lg-6 bg-light pt-3 pb-3 d-flex flex-column justify-content-center align-items-center text-center formulario"
+        >
+          <h2>Login</h2>
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">E-mail </label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                aria-describedby="emailHelp"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Senha</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="123abc"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              onclick="logar()"
+              class="btn btn-danger btn-outline-light border border-danger rounded-pill px-5"
+            >
+              Login
+            </button>
+          </form>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-6 bg-danger d-flex flex-column justify-content-center align-items-center textoEsplicativo"
+        >
+          <div class="row">
+            <div class="col text-center text-white">
+              <h1>Bem Vindo!</h1>
+              <p>Insira seus dados pessoais e comece a jornada conosco</p>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn-outline-light rounded-pill"
+                onclick="criarConta()"
+              >
+                Criar Conta
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./javascript/index.js"></script>
+  </body>
+</html>

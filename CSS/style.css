@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Nanum+Myeongjo:wght@400;700&family=Nunito+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: Nanum Myeongjo;
+  background-image: radial-gradient(#0000cd, #1f0100);
+  overflow: auto;
+}
+.container-layout {
+  height: 100vh;
+}
+.formulario {
+  border-radius: 5px 0 0 5px;
+  height: 60vh;
+}
+.formularioCC {
+  border-radius: 0 5px 5px 0;
+  height: 60vh;
+}
+
+.textoEsplicativo {
+  border-radius: 0 5px 5px 0;
+  height: 60vh;
+}
+.textoEsplicativoCC {
+  border-radius: 5px 0 0 5px;
+  height: 60vh;
+}
