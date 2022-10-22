@@ -25,7 +25,7 @@ formCadRecados.addEventListener("submit", (e) => {
 
 //Armazenar LocalStorage
 const buscaLocalStorage = () => {
-  let buscaLocalStorage1 = JSON.parse(localStorage.getItem("recados") || "[]");
+  let buscaLocalStorage1 = JSON.parse(localStorage.getItem("recados")) || [];
   return buscaLocalStorage1;
 };
 
@@ -51,20 +51,6 @@ function criaRecado() {
     </td>
     
     `;
-
-    // let botaoEditar = document.getElementById("botao-editar");
-    // botaoEditar.style.backgroundColor = "blue";
-    // botaoEditar.style.borderRadius = "10px";
-    // botaoEditar.style.color = "#fff";
-    // botaoEditar.style.padding = "2px 5px";
-    // botaoEditar.style.margin = "0 2px";
-
-    // let botaoApagar = document.getElementById("botao-apagar");
-    // botaoApagar.style.backgroundColor = "red";
-    // botaoApagar.style.borderRadius = "10px";
-    // botaoApagar.style.color = "#fff";
-    // botaoApagar.style.padding = "2px 5px";
-    // botaoApagar.style.margin = "0 2px";
 
     numero++;
   }
@@ -113,9 +99,11 @@ let apagar = (id) => {
 const btnEditar = (id) => {
   const edtRecados = buscaLocalStorage();
   const editarRecados = edtRecados.findIndex((recado) => recado.id === id);
-  edtRecados[editarRecados].desc = prompt("Editar descrição:");
+  edtRecados[editarRecados].desc =
+    prompt("Editar descrição:") || edtRecados[editarRecados].desc;
 
-  edtRecados[editarRecados].det = prompt("Editar detalhamento:");
+  edtRecados[editarRecados].det =
+    prompt("Editar detalhamento:") || edtRecados[editarRecados].det;
 
   atLocalStorage(edtRecados);
   criaRecado();

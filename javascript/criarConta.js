@@ -5,14 +5,16 @@ const senha = document.getElementById("password");
 const clickInput1 = document.querySelectorAll("button");
 
 const salvarLocalStorage = () => {
-  const salvarValoresdoLS = [
-    {
-      email: email.value,
-      nome: nome.value,
-      senha: senha.value,
-    },
-  ];
-  const conta = localStorage.setItem("user", JSON.stringify(salvarValoresdoLS));
+  let atualizarUser = JSON.parse(localStorage.getItem("user")) || [];
+  const salvarValoresdoLS = {
+    email: email.value,
+    nome: nome.value,
+    senha: senha.value,
+    recados: [],
+  };
+  atualizarUser.push(salvarValoresdoLS);
+  localStorage.setItem("user", JSON.stringify(atualizarUser)); //criar localStorage
+  console.log("salvarLocalStorage");
 };
 
 clickInput1.forEach(function (input) {
@@ -25,14 +27,9 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   checkInput();
-  const salvarValoresdoLS = {
-    email: email.value,
-    nome: nome.value,
-    senha: senha.value,
-    recados: [],
-  };
 
-  salvarLocalStorage(salvarValoresdoLS);
+  salvarLocalStorage();
+  window.location.href = "./index.html";
 });
 
 //Validação de todos os campos
@@ -60,7 +57,6 @@ function checkInput() {
     errovalidacao(senha, "A senha deve ter mais de 8 caracteres");
   } else {
     salvarValidacao(senha);
-    window.location.href = "./index.html";
   }
 }
 
